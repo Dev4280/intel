@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPS Toll Based Simulation</title>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <script src="/static/js/script.js"></script>
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
+            background: grey; /* Ensures visibility if the map doesn't load */
+        }
+    </style>
+</head>
+<body>
+    <h1>GPS Toll Based Simulation</h1>
+    <div>
+        <label for="start">Start Location:</label>
+        <input type="text" id="start">
+        <label for="destination">Destination Location:</label>
+        <input type="text" id="destination">
+        <label for="vehicle_type">Vehicle Type:</label>
+        <select id="vehicle_type">
+            <option value="Car">Car</option>
+            <option value="Light Commercial Vehicle">Light Commercial Vehicle</option>
+            <option value="Bus or Truck (Two axles)">Bus or Truck (Two axles)</option>
+            <option value="Three-axle commercial vehicles">Three-axle commercial vehicles</option>
+            <option value="Heavy Construction Machinery">Heavy Construction Machinery</option>
+            <option value="Oversized Vehicles">Oversized Vehicles</option>
+        </select>
+        <button id="start_button">Start</button>
+    </div>
+    <div id="map"></div>
+    <div id="toll">Toll: </div>
+</body>
+</html>
